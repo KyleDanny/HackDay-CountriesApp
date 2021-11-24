@@ -1,0 +1,51 @@
+// .map-outer-container {
+//   width: 100vw;
+//   height: 80vh;
+// }
+
+.mapContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 500px;
+}
+
+.sidebarStyle {
+  font-size: 1.5em;
+  background-color: rgba(35, 55, 75, 0.9);
+  color: #fff;
+  padding: 6px 12px;
+  font-family: monospace;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 12px;
+  border-radius: 4px;
+}
+
+.mapboxgl-ctrl-geocoder {
+  min-width: 300px;
+  min-height: 40px;
+  font-size: 1.9em;
+}
+
+.mapboxgl-ctrl-geocoder--icon-search {
+  width: 24px;
+  height: 24px;
+}
+
+.geocoder {
+  position: relative;
+  z-index: 1;
+  width: 50%;
+  left: 50%;
+  margin-left: -25%;
+  top: 50px;
+}
+
+.mapboxgl-ctrl-bottom-right {
+  display: none;
+}
