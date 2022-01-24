@@ -13,7 +13,7 @@ const App = () => {
   const handleCountryNameInput = formInput => setCountry(formInput);
 
   const fetchFromAPI = async (countryName) => {
-    await fetch(`/${countryName}`)
+    await fetch(`https://countries-app-server.herokuapp.com/${countryName}`)
       .then(response => response.json())
       .then(data => {
         // console.log(data.data[0])
