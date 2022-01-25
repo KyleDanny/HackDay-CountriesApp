@@ -54,7 +54,6 @@ const App = () => {
       <Map handleCountryNameInput={handleCountryNameInput} />
       {/* <Bookmarked /> */}
       <Cards countryInfo={countryInfo} />
-      <footer className="footer"></footer>
     </div>
   );
 }
