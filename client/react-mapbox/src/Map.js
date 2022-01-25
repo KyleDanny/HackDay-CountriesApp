@@ -7,6 +7,10 @@ import * as dotenv from "dotenv";
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 dotenv.config();
 
+// @ts-ignore
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
+
 mapboxgl.accessToken = process.env.API_KEY;
 
 const Map = ({ handleCountryNameInput }) => {
