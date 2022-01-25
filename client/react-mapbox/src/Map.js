@@ -2,10 +2,12 @@ import React, { useEffect, useRef, useState } from "react";
 import "./Map.scss";
 import mapboxgl from "mapbox-gl";
 import 'mapbox-gl/dist/mapbox-gl.css'; // added 
+import * as dotenv from "dotenv";
 
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
+dotenv.config();
 
-mapboxgl.accessToken = 'pk.eyJ1Ijoia3lsZWRhbm55IiwiYSI6ImNrdnI0bndyYTA0aHozMGx5cXo5ZzV0OGYifQ.qLzQLDWvg8gp0wAIkNeq_A';
+mapboxgl.accessToken = process.env.API_KEY;
 
 const Map = ({ handleCountryNameInput }) => {
   const node = useRef(null);
