@@ -13,6 +13,10 @@ Check it out: [HackDay-CountriesApp](https://countries-mapbox-app.netlify.app/)
 * Express w/ restCountries API
 * SASS
 
+### Deployment
+* Front end deployed on Netlify
+* Back end deployed on Heroku 
+
 ## Installation 
 1. __git clone repo__ 'https://github.com/KyleDanny/HackDay-CountriesApp.git'
 2. Create your own API key from Mapbox (https://docs.mapbox.com/help/tutorials/get-started-tokens-api/) and add into your .env
