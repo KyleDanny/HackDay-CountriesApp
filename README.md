@@ -20,3 +20,4 @@ Check it out: [HackDay-CountriesApp](https://countries-mapbox-app.netlify.app/)
 4. __npm start__ in respective folders /client/react-mapbox & /server
 5. Start exploring!
 
+![](countries-app.gif)
