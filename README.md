@@ -1,4 +1,4 @@
-# hackDay-CountriesApp
+# HackDay-CountriesApp
 
 HackDay Project at </salt> 2,5 months into the course.
 
