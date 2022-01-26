@@ -2,7 +2,7 @@
 
 HackDay Project at </ salt > 2,5 months into the course.
 
-The general idea for Hackday is that you will get the chance to build an individual project over a period of **_8 hours_**, and to present the project the day after. It’s a really fun day and also a great opportunity to build something for your portfolio. 
+The general idea for Hackday is that you get the chance to build an individual project over a period of **_8 hours_**, and to present your project the day after. It’s a really fun day and also a great opportunity to build something for your portfolio. 
 
 The CountriesApp is a small site allowing you to search and retrieve information and location of the country you search for. 
 
