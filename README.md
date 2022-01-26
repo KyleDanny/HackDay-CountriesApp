@@ -13,7 +13,7 @@ Check it out: [HackDay-CountriesApp](https://countries-mapbox-app.netlify.app/)
 * Express w/ restCountries API
 * SASS
 
-### Deployment
+### Deployment :rocket:
 * Front end deployed on Netlify
 * Back end deployed on Heroku 
 
