@@ -10,8 +10,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
-mapboxgl.accessToken = `pk.eyJ1Ijoia3lsZWRhbm55IiwiYSI6ImNsMGkxaDFlYjA5NjIzbG1xdm8wN3Z3cjEifQ.pyD123VP3LZrCxN3SCeliQ`;
-// process.env.REACT_APP_API_KEY;
+mapboxgl.accessToken = process.env.REACT_APP_API_KEY;
 
 const Map = ({ setCountry, country }) => {
   const mapContainer = useRef(null);
