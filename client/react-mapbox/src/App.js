@@ -21,7 +21,6 @@ const App = () => {
 
   useEffect(() => {
     if (country) {
-      console.log(country)
       fetchFromAPI(country);
     }
   }, [country]);
