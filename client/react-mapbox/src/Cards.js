@@ -3,13 +3,13 @@ import './Cards.scss';
 
 const Cards = ({ countryInfo }) => {
   console.log(countryInfo)
-
+  
   const display = () => {
     if (countryInfo !== undefined) {
       return (
       <div className="parent">
-        <div className="div1 card"> 
-          <img className="img-flag" src={countryInfo.flags.png} alt="flag" ></img> 
+        {/* <div className="div1 card"> 
+          <img className="img-flag" src={countryInfo.data.flags.png} alt="flag" ></img> 
         </div>
         <div className="div2 card"> 
         <div>
@@ -75,7 +75,7 @@ const Cards = ({ countryInfo }) => {
             <p> Internet Domain: {countryInfo.tld} </p>
             <p> Fifa Handle: {countryInfo.fifa} </p>
           </div>
-        </div>
+        </div> */}
       </div>
       )
     }

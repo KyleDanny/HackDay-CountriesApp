@@ -13,12 +13,11 @@ mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worke
 
 mapboxgl.accessToken = process.env.API_KEY;
 
-const Map = ({ handleCountryNameInput }) => {
+const Map = ({ setCountry, country }) => {
   const node = useRef(null);
   const [lng, setLng] = useState(5);
   const [lat, setLat] = useState(34);
   const [zoom, setZoom] = useState(2);
-  const [countryInput, setCountryInput] = useState('')
 
   useEffect(() => {  
     const map = new mapboxgl.Map({
@@ -34,8 +33,7 @@ const Map = ({ handleCountryNameInput }) => {
       mapboxgl: mapboxgl
       })
       .on('result', (data) => {
-        // console.log(data.result.place_name);
-        setCountryInput(data.result.place_name);
+        setCountry(data.result.place_name);
       })
     );
 
@@ -53,19 +51,16 @@ const Map = ({ handleCountryNameInput }) => {
       setLat(map.getCenter().lat.toFixed(4));
       setZoom(map.getZoom().toFixed(2));
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  useEffect(() => {
-    handleCountryNameInput(countryInput);
-  }, [handleCountryNameInput, countryInput])
 
   return (
     <div className="map-outer-container">
       <div id="geocoder" className="geocoder"></div>
       <div id="map" ref={node} className="mapContainer">
         <div className="sidebarStyle">
-          Country: {countryInput} | Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
+          Country: {country} | Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
         </div>
       </div>
     </div>
