@@ -3,16 +3,14 @@ import React, { useState, useEffect } from 'react';
 import './App.scss';
 import Navbar from './Navbar';
 import Map from './Map';
-// import Bookmarked from './Bookmarked';
 import Cards from './Cards';
 
 const App = () => {
   const [country, setCountry] = useState('');
-  const [countryInfo, setCountryInfo] = useState();
+  const [countryInfo, setCountryInfo] = useState('');
 
-  // https://countries-app-server.herokuapp.com
   const fetchFromAPI = async (countryName) => {
-    await fetch(`/${countryName}`)
+    await fetch(`https://countries-app-server.herokuapp.com/${countryName}`)
       .then(response => response.json())
       .then(data => {
         setCountryInfo(data);
@@ -29,7 +27,6 @@ const App = () => {
     <div className="App">
       <Navbar />
       <Map country={country} setCountry={setCountry} />
-      {/* <Bookmarked /> */}
       <Cards countryInfo={countryInfo} />
     </div>
   );
